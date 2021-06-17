@@ -30,16 +30,15 @@ below:
     administrative user interface. This provides a quick summary of
     where you are from cost standpoint to that point in the month. For
     more information about configuring chargeback rates in the full
-    administrative user interface and how {{ site.data.product.title }} calculates
+    administrative user interface and how {{ site.data.product.title_short }} calculates
     chargeback costs, see
-    [Chargeback](https://access.redhat.com/documentation/en/red-hat-cloudforms/4.7/single/monitoring-alerts-and-reporting/#sect_chargeback)
+    [Chargeback](../monitoring_alerts_and_reporting/index.html#chargeback)
     in the *Monitoring, Alerts, and Reporting* guide.
 
-<div class="note">
+**Note:**
 
 If you are on the first day of the month, there can be no data yet
 therefore resulting in zero dollar amount. Also, if you have a lot of
 data, it might not have rolled into the new month yet, resulting in no
 data and dollar amount for month to date.
 
-</div>

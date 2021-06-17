@@ -1,8 +1,8 @@
-1.  Navigate to menu:Services\[Catalogs\].
+1.  Browse to menu: **Service > Catalogs**.
 
 2.  Click the **Catalog Items** accordion.
 
-3.  Click ![1847](../images/1847.png)(**Configuration**), and then
+3.  Click **Configuration**, and then
     ![1862](../images/1862.png)(**Add a New Catalog Item**).
 
 4.  Select **Generic** from the Catalog Item Type list.
@@ -29,16 +29,11 @@
         2.  **Retirement Entry Point (Domain/NS/Cls/Inst)** requires you
             to select an Automate instance to run upon retirement.
 
-            <div class="note">
+            **Note:**
 
-            The entry point must be a State Machine since the
-            **Provisioning Entry Point** list is filtered to only show
-            State Machine class instances. No other entry points will be
+            The entry point must be a State Machine since the **Provisioning Entry Point** list is filtered to only show State Machine class instances. No other entry points will be
             available from the **Provisioning Entry Point** field.
 
-            </div>
-
-6.  In the **Details** subtab, write a **Long Description** for the
-    catalog item.
+6.  In the **Details** subtab, write a **Long Description** for the catalog item.
 
 7.  Click **Add**.

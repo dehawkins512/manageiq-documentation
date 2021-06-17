@@ -1,4 +1,4 @@
-## Configuring {{ site.data.product.title }}
+## Configuring {{ site.data.product.title_short }}
 
 After installing {{ site.data.product.title_short }} and running it for the first
 time, you must perform some basic configuration. To configure
@@ -15,7 +15,7 @@ appliance console.
 
 1.  Start the appliance and open a terminal console.
 
-2.  Enter the `appliance_console` command. The {{ site.data.product.title }} appliance
+2.  Enter the `appliance_console` command. The {{ site.data.product.title_short }} appliance
     summary screen displays.
 
 3.  Press `Enter` to manually configure settings.
@@ -27,12 +27,10 @@ appliance console.
 
 6.  Press `Enter` to accept a setting where applicable.
 
-<div class="note">
+**Note:**
 
 The {{ site.data.product.title_short }} appliance console automatically logs out
 after five minutes of inactivity.
-
-</div>
 
 ### Configuring a Database
 
@@ -59,13 +57,13 @@ reporting zone, where each zone provides a specific function. The
 appliances in these zones must be configured to use an external
 database.
 
-The `postgresql.conf` file used with {{ site.data.product.title }} databases requires
+The `postgresql.conf` file used with {{ site.data.product.title_short }} databases requires
 specific settings for correct operation. For example, it must correctly
 reclaim table space, control session timeouts, and format the PostgreSQL
 server log for improved system support. Due to these requirements, Red
-Hat recommends that external {{ site.data.product.title }} databases use a
+Hat recommends that external {{ site.data.product.title_short }} databases use a
 `postgresql.conf` file based on the standard file used by the
-{{ site.data.product.title }} appliance.
+{{ site.data.product.title_short }} appliance.
 
 Ensure you configure the settings in the `postgresql.conf` to suit your
 system. For example, customize the `shared_buffers` setting according to
@@ -74,44 +72,39 @@ PostgreSQL instance. In addition, depending on the aggregate number of
 appliances expected to connect to the PostgreSQL instance, it may be
 necessary to alter the `max_connections` setting.
 
-<div class="note">
+**Note:**
 
-  - {{ site.data.product.title }} requires PostgreSQL version 9.5.
+  - {{ site.data.product.title_short }} requires PostgreSQL version 9.5.
 
   - Because the `postgresql.conf` file controls the operation of all
     databases managed by a single instance of PostgreSQL, do not mix
-    {{ site.data.product.title }} databases with other types of databases in a single
+    {{ site.data.product.title_short }} databases with other types of databases in a single
     PostgreSQL instance.
-
-</div>
 
 1.  Start the appliance and open a terminal console.
 
-2.  Enter the `appliance_console` command. The {{ site.data.product.title }} appliance
+2.  Enter the `appliance_console` command. The {{ site.data.product.title_short }} appliance
     summary screen displays.
 
 3.  Press **Enter** to manually configure settings.
 
-4.  Select **Configure Database** from the menu.
+4.  Select **Configure Application** from the menu.
 
 5.  You are prompted to create or fetch a security key.
 
-      - If this is the first {{ site.data.product.title }} appliance, choose **Create
+      - If this is the first {{ site.data.product.title_short }} appliance, choose **Create
         key**.
 
-      - If this is not the first {{ site.data.product.title }} appliance, choose
+      - If this is not the first {{ site.data.product.title_short }} appliance, choose
         **Fetch key from remote machine** to fetch the key from the
         first appliance.
 
-        <div class="note">
+        **Note:**
 
         All {{ site.data.product.title_short }} appliances in a multi-region
         deployment must use the same key.
 
-        </div>
-
-6.  Choose **Create Region in External Database** for the database
-    location.
+6.  Choose **Create Region in External Database** for the database location.
 
 7.  Enter the database hostname or IP address when prompted.
 
@@ -124,7 +117,7 @@ necessary to alter the `max_connections` setting.
 
 11. Confirm the configuration if prompted.
 
-{{ site.data.product.title }} will then configure the external database.
+{{ site.data.product.title_short }} will then configure the external database.
 
 ### Configuring a Worker Appliance
 
@@ -138,27 +131,24 @@ has a region configured with a database.
 
 1.  Start the appliance and open a terminal console.
 
-2.  Enter the `appliance_console` command. The {{ site.data.product.title }} appliance
+2.  Enter the `appliance_console` command. The {{ site.data.product.title_short }} appliance
     summary screen displays.
 
 3.  Press **Enter** to manually configure settings.
 
-4.  Select **Configure Database** from the menu.
+4.  Select **Configure Application** from the menu.
 
 5.  You are prompted to create or fetch a security key. Since this is
-    not the first {{ site.data.product.title }} appliance, choose **2) Fetch key from
+    not the first {{ site.data.product.title_short }} appliance, choose **2) Fetch key from
     remote machine**. For worker and multi-region setups, use this
     option to copy the security key from another appliance.
 
-    <div class="note">
+    **Note:**
 
     All {{ site.data.product.title_short }} appliances in a multi-region deployment
     must use the same key.
 
-    </div>
-
-6.  Choose **Join Region in External Database** for the database
-    location.
+6.  Choose **Join Region in External Database** for the database location.
 
 7.  Enter the database hostname or IP address when prompted.
 

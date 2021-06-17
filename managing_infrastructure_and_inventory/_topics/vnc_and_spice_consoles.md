@@ -5,7 +5,7 @@ screen, shut down screen, and desktop of a virtual machine, and to
 interact with that virtual machine in a similar way to a physical
 machine.
 
-{{ site.data.product.title }} offers the following support for HTML5-based VNC, SPICE,
+{{ site.data.product.title_short }} offers the following support for HTML5-based VNC, SPICE,
 and WebMKS consoles:
 
   - VNC and SPICE consoles for Red Hat Virtualization Manager with
@@ -15,7 +15,7 @@ and WebMKS consoles:
 
   - VNC consoles for OpenStack using OpenStack-supplied websocket proxy.
 
-<div class="note">
+**Note:**
 
   - VMware no longer supports the MKS console type. Also, VMRC is no
     longer a browser plugin but a native desktop application. As a
@@ -31,31 +31,17 @@ and WebMKS consoles:
     WebMKS support in {{ site.data.product.title_short }}, see [Configuring WebMKS
     Support in {{ site.data.product.title_short }}](#configuring-the-webmks-support).
 
-</div>
-
-All of the above make use of the websocket protocol supported by all
-recent versions of browsers, and can use SSL to encrypt the websocket
-connection.
+All of the above make use of the websocket protocol supported by all recent versions of browsers, and can use SSL to encrypt the websocket connection.
 
   - OpenStack
-    {{ site.data.product.title }} only makes an API call to get the URL for the
-    console and open that console in a web browser; see [Directly
-    Connect to a VNC
-    Console](https://access.redhat.com/documentation/en/red-hat-openstack-platform/8/single/instances-and-images-guide/#connect_to_an_instance)
-    in the Red Hat OpenStack Platform *Instances and Images Guide* for
-    more details.
+    {{ site.data.product.title_short }} only makes an API call to get the URL for the console and open that console in a web browser; see [Directly Connect to a VNC Console](https://access.redhat.com/documentation/en/red-hat-openstack-platform/8/single/instances-and-images-guide/#connect_to_an_instance)
+    in the Red Hat OpenStack Platform *Instances and Images Guide* for more details.
 
   - Red Hat Enterprise Virtualization Manager and VMware
-    By default, the websocket connection runs over HTTPS or HTTP based
-    on how the application was accessed. Under an appliance, you will
-    most likely use HTTPS, and, therefore, the websocket connection will
+    By default, the websocket connection runs over HTTPS or HTTP based on how the application was accessed. Under an appliance, you will most likely use HTTPS, and, therefore, the websocket connection will
     be wss:// (websocket with SSL).
 
-    When configuring Red Hat Virtualization Manager for virtual machine
-    console access, set the display type for each virtual machine to
-    `noVNC` or `SPICE HTML5`. For more information on configuring
-    console options, see [Configuring Console
-    Options](https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html-single/virtual_machine_management_guide/index#sect-Configuring_Console_Options)
+    When configuring Red Hat Virtualization Manager for virtual machine console access, set the display type for each virtual machine to `noVNC` or `SPICE HTML5`. For more information on configuring console options, see [Configuring Console Options](https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html-single/virtual_machine_management_guide/index#sect-Configuring_Console_Options)
     in the Red Hat Virtualization *Virtual Machine Management Guide*.
 
 ## Configuring Console Access to VMware ESXi Hosts At A Network Layer
@@ -64,9 +50,9 @@ When configuring access to the VNC or HTML5 console, make sure that at a
 network layer:
 
   - All VNC ports (5900-6000) are opened from the machine on which you
-    access the {{ site.data.product.title }} Console to the {{ site.data.product.title }}.
+    access the {{ site.data.product.title_short }} Console to the {{ site.data.product.title_short }}.
 
-  - All VNC ports (5900-6000) are opened from the {{ site.data.product.title }} to
+  - All VNC ports (5900-6000) are opened from the {{ site.data.product.title_short }} to
     each VMware ESXi host running virtual machines that you want to
     access.
 
@@ -79,7 +65,7 @@ network layer:
 
     The `gdbserver` ruleset must be enabled on each ESXi host running
     virtual machines that will be accessed through the HTML5 console or
-    VNC console on the {{ site.data.product.title }}. The ruleset can be configured on
+    VNC console on the {{ site.data.product.title_short }}. The ruleset can be configured on
     the host itself, or using the VMware vCenter web user interface.
 
 The following procedures apply to VMware vCenter 5.0 and later.
@@ -123,7 +109,7 @@ Follow these steps to configure the VMware ESXi host firewall ports for
 HTML5 or VNC console access to guest virtual machine consoles. The
 firewall ports must be enabled on each VMware ESXi host running virtual
 machines that will be accessed through the HTML5 or VNC console on the
-{{ site.data.product.title }}.
+{{ site.data.product.title_short }}.
 
 1.  Log in to your vSphere Client and select menu:Home\[Inventory \>
     Hosts and Clusters\].

@@ -13,7 +13,7 @@ To install VMware VDDK:
     (`VMware-vix-disklib-[version].x86_64.tar.gz`) from the VMware
     website.
 
-    <div class="note">
+    **Note:**
 
       - If you do not already have a login ID to VMware, then you will
         need to create one. At the time of this writing, the file can be
@@ -26,8 +26,6 @@ To install VMware VDDK:
 
       - See VMware documentation for information about their policy
         concerning backward and forward compatibility for VDDK.
-
-    </div>
 
 2.  Download and copy the `VMware-vix-disklib-[version].x86_64.tar.gz`
     file to the `/root` directory of the appliance.
@@ -42,18 +40,17 @@ To install VMware VDDK:
         # cp vmware-vix-disklib-distrib/ -rf /usr/lib/vmware-vix-disklib/
         # ln -s /usr/lib/vmware-vix-disklib/lib64/libvixDiskLib.so /usr/lib/libvixDiskLib.so
         # ln -s /usr/lib/vmware-vix-disklib/lib64/libvixDiskLib.so.6 /usr/lib/libvixDiskLib.so.6
+        # ln -s /usr/lib/vmware-vix-disklib/lib64/libvixDiskLib.so.6.7.0 /usr/lib/libvixDiskLib.so.6.7.0
 
 5.  Run `ldconfig` to instruct {{ site.data.product.title_short }} to find the newly
     installed VDDK library.
 
-    <div class="note">
+    **Note:**
 
     Use the following command to verify the VDDK files are listed and
     accessible to the appliance:
 
         # ldconfig -p | grep vix
-
-    </div>
 
 6.  Restart the {{ site.data.product.title_short }} appliance.
 

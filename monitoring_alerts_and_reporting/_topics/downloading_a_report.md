@@ -30,11 +30,10 @@ view the report in a full screen.
       - The report is automatically named with the type of report and
         date.
 
-<div class="note">
+**Note:**
 
 Edit and delete buttons are only visible to administrators and super
 administrators. Edit and delete functions are only available to
-customer-created reports. The {{ site.data.product.title }} pre-configured reports
+customer-created reports. The {{ site.data.product.title_short }} pre-configured reports
 cannot be edited or deleted, but they can be copied.
 
-</div>

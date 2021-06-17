@@ -23,9 +23,9 @@ through `virsh`:
 
 {% include configuration-advanced.md %}
 
-### Configuring a Database for {{ site.data.product.title }}
+### Configuring a Database for {{ site.data.product.title_short }}
 
-{{ site.data.product.title }} supports the use of an internal or external database.
+{{ site.data.product.title_short }} supports the use of an internal or external database.
 The following instructions are suitable for configuring an *internal*
 database. For instructions on how to configure an external database
 instead, see [Configuring an External
@@ -33,17 +33,17 @@ Database](https://access.redhat.com/documentation/en/red-hat-cloudforms/4.1/sing
 
 {% include configuration-db.md %}
 
-### Configuring General {{ site.data.product.title }} Settings
+### Configuring General {{ site.data.product.title_short }} Settings
 
 After configuring the general settings for the appliance and creating a
-database for it, you can now launch {{ site.data.product.title }}. To do this, use the
+database for it, you can now launch {{ site.data.product.title_short }}. To do this, use the
 **Start EVM Server Processes** option from the appliance console
 ([Configuring General Appliance
 Settings](#configuring_general_appliance_settings)). Once you launch
-{{ site.data.product.title }}, note the **Hostname** and **IP Address** displayed on
+{{ site.data.product.title_short }}, note the **Hostname** and **IP Address** displayed on
 the appliance console screen.
 
-Open the {{ site.data.product.title }} web-based user interface by accessing either
+Open the {{ site.data.product.title_short }} web-based user interface by accessing either
 **Hostname** and **IP Address** on a web browser. At the login screen,
 use the following credentials:
 
@@ -51,16 +51,13 @@ use the following credentials:
 
   - Password: **smartvm**
 
-<div class="note">
+**Note:**
 
 You can also change the password of the **admin** account from the login
 screen. To do so, click the **Update Password** link.
 
-</div>
-
-You can access and configure most {{ site.data.product.title }} settings through the
-**Configuration** menu. You can access this menu through **Administrator
-| EVM** \> **Configuration**.
+You can access and configure most {{ site.data.product.title_short }} settings through the
+**Configuration** menu. You can access this menu through **Administrator | EVM** \> **Configuration**.
 
 {% include configuration-gui.md %}
 
@@ -72,8 +69,7 @@ drivers, network information, hardware, and security patches on assets
 managed by the OpenStack provider. Enabling SmartState Analysis involves
 two steps:
 
-1.  [Configuring {{ site.data.product.title_short }} Capacity and
-    Utilization](#cf-caputils), and
+1.  [Configuring {{ site.data.product.title_short }} Capacity and Utilization](#cf-caputils), and
 
 2.  [Enabling SmartState Analysis](#cf-smartproxy)
 
@@ -90,8 +86,7 @@ To enable these server roles:
 
 {% include cap-util-assign-server-roles.md %}
 
-For more information, see [Capacity and Utilization
-Collection](https://access.redhat.com/documentation/en/red-hat-cloudforms/4.1/deployment-planning-guide/#capacity_and_utilization_collection)
+For more information, see [Capacity and Utilization Collection](https://access.redhat.com/documentation/en/red-hat-cloudforms/4.1/deployment-planning-guide/#capacity_and_utilization_collection)
 from the *Deployment Planning Guide*.
 
 #### Enabling SmartState Analysis

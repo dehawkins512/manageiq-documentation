@@ -11,13 +11,9 @@ virtual machines in Red Hat Virtualization, users must enter their own
 unique name for the virtual machine they choose or the operation will
 fail, so this field must be exposed.
 
-<div class="note">
+**Note:**
 
-A service requires an assigned service dialog, regardless of exposing
-details to user. A simple service dialog with a **Submit** and
-**Cancel** button is required at minimum.
-
-</div>
+A service requires an assigned service dialog, regardless of exposing details to user. A simple service dialog with a **Submit** and **Cancel** button is required at minimum.
 
 A service dialog contains three components:
 
@@ -42,11 +38,11 @@ provisioning dialog.
 The following procedure outlines how to create a service dialog for your
 sample service:
 
-1.  Navigate to menu:Automation\[Automate \> Customization\].
+1.  Browse to menu: **Automation > Automate > Customization**.
 
 2.  Click the **Service Dialogs** accordion.
 
-3.  Click ![1847](../images/1847.png)(**Configuration**), and then
+3.  Click **Configuration**, and then
     ![1862](../images/1862.png)(**Add a new Dialog**).
 
 4.  Enter basic information for your dialog under **General**:
@@ -90,30 +86,23 @@ sample service:
 
     3.  Enter `service_name` in **Name**.
 
-    4.  Click **Options**, then select **String** from the **Value
-        Type** list.
+    4.  Click **Options**, then select **String** from the **Value Type** list.
 
     5.  Click **Save**.
 
-8.  Add a **Text Box** element to the section for the virtual machine
-    name:
+8.  Add a **Text Box** element to the section for the virtual machine name:
 
-    1.  From the list of elements on the left, click the **Text Box**
-        element, then drag-and-drop it inside the section. Then, click
-        the ![pencil](../images/1851.png)icon next to the element to edit
-        its field details.
+    1.  From the list of elements on the left, click the **Text Box** element, then drag-and-drop it inside the section. Then, click the ![pencil](../images/1851.png)icon next to the element to edit its field details.
 
     2.  Enter `VM Name` in **Label**.
 
     3.  Enter `vm_name` in **Name**.
 
-    4.  Click **Options**, then select **String** from the **Value
-        Type** list.
+    4.  Click **Options**, then select **String** from the **Value Type** list.
 
     5.  Click **Save**.
 
-9.  Add a **Text Box** element to the section for the virtual machine
-    description:
+9.  Add a **Text Box** element to the section for the virtual machine description:
 
     1.  From the list of elements on the left, click the **Text Box**
         element, then drag-and-drop it inside the section. Then, click
@@ -124,15 +113,13 @@ sample service:
 
     3.  Enter `vm_description` in **Name**.
 
-    4.  Click **Options**, then select **String** from the **Value
-        Type** list.
+    4.  Click **Options**, then select **String** from the **Value Type** list.
 
     5.  Click **Save**.
 
 10. Add a new section to the tab:
 
-    1.  Click ![1862](../images/1862.png)**Add Section**. Then, click the
-        ![pencil](../images/1851.png)icon on the upper-right to edit
+    1.  Click ![1862](../images/1862.png)**Add Section**. Then, click the ![pencil](../images/1851.png)icon on the upper-right to edit
         section details.
 
     2.  Enter `VM Characteristics` in **Label**.

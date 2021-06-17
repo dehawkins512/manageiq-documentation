@@ -1,8 +1,7 @@
-1.  Navigate to menu:Compute\[Containers \> Providers\].
+1.  Browse to menu: **Compute > Containers > Providers**.
 
-2.  Click ![Configuration](../images/1847.png) (**Configuration**), then
-    click ![Add a New Containers Provider](../images/1862.png) (**Add a
-    New Containers Provider**).
+2.  Click **Configuration**, then
+    click ![Add a New Containers Provider](../images/1862.png) (**Add a New Containers Provider**).
 
 3.  Enter a **Name** for the provider.
 
@@ -11,18 +10,7 @@
 5.  Enter the appropriate **Zone** for the provider. If you do not
     specify a zone, it is set to `default`.
 
-6.  From the **Alerts** list, select **Prometheus** to enable external
-    alerts. Selecting **Prometheus** adds an **Alerts** tab to the lower
-    pane to configure the Prometheus service. Alerts are disabled by
-    default.
-
-7.  From the **Metrics** list, select **Hawkular** or **Prometheus** to
-    collect capacity and utilization data, or leave as **Disabled**.
-    Selecting **Prometheus** or **Hawkular** adds a **Metrics** tab to
-    the lower pane for further configuration. Metrics are disabled by
-    default.
-
-8.  In the **Default** tab, configure the following for the OpenShift
+6.  In the **Default** tab, configure the following for the OpenShift
     provider:
 
     1.  Select a **Security Protocol** method to specify how to
@@ -39,7 +27,7 @@
             provider’s CA certificate to the **Trusted CA
             Certificates** box in PEM format.
 
-            <div class="note">
+            **Note:**
 
             You can obtain your OpenShift Container Platform provider’s
             CA certificate for all endpoints (default, metrics, alerts)
@@ -47,31 +35,23 @@
             of text starting with `-----BEGIN CERTIFICATE-----`) into
             the **Trusted CA Certificates** field.
 
-            </div>
-
           - **SSL without validation**: Authenticate the provider
             insecurely (not recommended).
 
-    2.  Enter the **Hostname** (or IPv4 or IPv6 address) of the
-        provider.
+    2.  Enter the **Hostname** (or IPv4 or IPv6 address) of the provider.
 
-        <div class="important">
+        **Important:**
 
         The **Hostname** must use a unique fully qualified domain name.
-
-        </div>
 
     3.  Enter the **API Port** of the provider. The default port is
         `8443`.
 
     4.  Enter a token for your provider in the **Token** box.
 
-        <div class="note">
+        **Note:**
 
-        To obtain a token for your provider, run the `oc get secret`
-        command on your provider; see [Obtaining an OpenShift Container
-        Platform Management
-        Token](https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.7/html-single/managing_providers/#Obtaining_OpenShift_Container_Platform_Management_Token).
+        To obtain a token for your provider, run the `oc get secret` command on your provider; see [Obtaining an OpenShift Container Platform Management Token](../managing_providers/index.html#obtaining-an-openshift-container-platform-management-token).
 
         For example:
 
@@ -79,15 +59,14 @@
         management-admin-token-8ixxs --template='{{index .data
         "ca.crt"}}' | base64 --decode
 
-        </div>
-
-    5.  Click **Validate** to confirm that {{ site.data.product.title }} can connect
+    5.  Click **Validate** to confirm that {{ site.data.product.title_short }} can connect
         to the OpenShift Container Platform provider.
 
-9.  For the **Prometheus** alerts service, add the Prometheus alerts
-    endpoint in the **Alerts** tab:
+7.  In the **Alerts** endpoint tab optionally configure the alerts service:
 
-    1.  Select a **Security Protocol** method to specify how to
+    1.  Select a service type, or leave disabled.  Prometheus alerts are only supported on OCP v3
+
+    2.  Select a **Security Protocol** method to specify how to
         authenticate the service:
 
           - **SSL**: Authenticate the provider securely using a trusted
@@ -104,19 +83,20 @@
           - **SSL without validation**: Authenticate the provider
             insecurely using SSL. (Not recommended)
 
-    2.  Enter the **Hostname** (or IPv4 or IPv6 address) or alert
+    3.  Enter the **Hostname** (or IPv4 or IPv6 address) or alert
         **Route**.
 
-    3.  Enter the **API Port** if your Prometheus provider uses a
+    4.  Enter the **API Port** if your Prometheus provider uses a
         non-standard port for access. The default port is `443`.
 
-    4.  Click **Validate** to confirm that {{ site.data.product.title_short }} can
+    5.  Click **Validate** to confirm that {{ site.data.product.title_short }} can
         connect to the alerts service.
 
-10. If you selected a metrics service, configure the service details in
-    the **Metrics** tab:
+8. In the **Metrics** endpoint tab optionally configure the metrics service details:
 
-    1.  Select a **Security Protocol** method to specify how to
+    1.  Select a service type (Prometheus or Hawkular) or leave disabled
+
+    2.  Select a **Security Protocol** method to specify how to
         authenticate the service:
 
           - **SSL**: Authenticate the provider securely using a trusted
@@ -130,7 +110,7 @@
             provider’s CA certificate to the **Trusted CA
             Certificates** box in PEM format.
 
-            <div class="note">
+            **Note:**
 
             In OpenShift, the default deployment of the router generates
             certificates during installation, which can be used with the
@@ -140,24 +120,45 @@
             in `/etc/origin/master/service-signer.crt` on the first
             master in a cluster.
 
-            </div>
-
           - **SSL without validation**: Authenticate the provider
             insecurely using SSL. (Not recommended)
 
-    2.  Enter the **Hostname** (or IPv4 or IPv6 address) of the
-        provider, or use the **Detect** button to find the hostname.
+    3.  Enter the **Hostname** (or IPv4 or IPv6 address) of the
+        metrics service.
 
-    3.  Enter the **API Port** if your Hawkular or Prometheus provider
+        In order to find the hostname you can use the `oc get route` command.
+
+        On OCPv4 you can get the Prometheus route by running:
+
+        `oc get route prometheus-k8s -n openshift-monitoring`
+
+        Example:
+        ```
+        oc get route prometheus-k8s -n openshift-monitoring
+        NAME             HOST/PORT                                            PATH             SERVICES  PORT      TERMINATION          WILDCARD
+        prometheus-k8s   prometheus-k8s-openshift-monitoring.ocp.example.com  prometheus-k8s   web       reencrypt/Redirect   None
+        ```
+
+        In this example you would use `prometheus-k8s-openshift-monitoring.ocp.example.com` as the metrics hostname.
+
+        On OCPv3 you can get the Hawkular route by running:
+
+        `oc get route hawkular-metrics -n openshift-infra`
+
+        Or the Prometheus route:
+
+        `oc get route prometheus -n openshift-metrics`
+
+    4.  Enter the **API Port** if your Hawkular or Prometheus provider
         uses a non-standard port for access. The default port is `443`.
 
-    4.  Click **Validate** to confirm that {{ site.data.product.title }} can connect
+    5.  Click **Validate** to confirm that {{ site.data.product.title_short }} can connect
         to the metrics endpoint.
 
-11. Click the **Advanced** tab to add image inspector settings for
+9. Click the **Advanced** tab to add image inspector settings for
     scanning container images on your provider using OpenSCAP.
 
-    <div class="note">
+    **Note:**
 
       - These settings control downloading the image inspector container
         image from the registry and obtaining the Common Vulnerabilities
@@ -168,8 +169,6 @@
         OpenSCAP scanning:
         <https://www.redhat.com/security/data/metrics/ds/>. This
         information is based on the source code of OpenSCAP.
-
-    </div>
 
     1.  Enter the proxy information for the provider in either **HTTP**,
         **HTTPS**, or **NO Proxy** depending on your environment.
@@ -187,9 +186,9 @@
     5.  Enter `https://www.redhat.com/security/data/metrics/ds/` in
         **CVE location**.
 
-12. Click **Add**.
+10. Click **Add**.
 
-<div class="note">
+**Note:**
 
 You can also set global default image-inspector settings for all
 OpenShift providers in the advanced settings menu by editing the values
@@ -199,5 +198,3 @@ For example:
 
     :image_inspector_registry: registry.access.redhat.com
     :image_inspector_repository: openshift3/image-inspector
-
-</div>

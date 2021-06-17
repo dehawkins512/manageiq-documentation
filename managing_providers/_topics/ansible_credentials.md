@@ -1,12 +1,12 @@
 # Credentials
 
-Credentials are utilized by {{ site.data.product.title }} for authentication when
+Credentials are utilized by {{ site.data.product.title_short }} for authentication when
 running Ansible playbooks against machines, synchronizing with inventory
 sources, and importing project content from a version control system.
 
 ## Adding Credentials
 
-{{ site.data.product.title }} can store credentials used by playbooks. Credentials
+{{ site.data.product.title_short }} can store credentials used by playbooks. Credentials
 saved in {{ site.data.product.title_short }} are matched and executed with a playbook
 when run.
 
@@ -61,12 +61,9 @@ a remote host.
   - **Vault Password**: Ansible Vault credentials have only the **Vault
     Password** attribute that may be configured.
 
-<div class="note">
+**Note:**
 
-For more information on Ansible Vault, see [Using Vault in
-playbooks](http://docs.ansible.com/ansible/latest/playbooks_vault.html).
-
-</div>
+For more information on Ansible Vault, see [Using Vault in playbooks](http://docs.ansible.com/ansible/latest/playbooks_vault.html).
 
 ### Network
 
@@ -221,8 +218,7 @@ configured:
         followed by the path `/ovirt_engine/api`. Example:
         `https://your.rhv.com/ovirt_engine/api`
 
-      - See [Ansible
-        Roles](https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.1/html/administration_guide/chap-automating_rhv_configuration_using_ansible#Ansible_Roles)
+      - See [Ansible Roles](https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.1/html/administration_guide/chap-automating_rhv_configuration_using_ansible#Ansible_Roles)
         for more information on Ansible Roles available for Red Hat
         Virtualization.
 
@@ -247,13 +243,9 @@ Satellite credentials have several attributes that may be configured:
 Selecting this credential type enables synchronization of inventory with
 VMware vCenter.
 
-<div class="important">
+**Important:**
 
-If both {{ site.data.product.title_short }} and a VMware provider are located in the
-same IPv6-only network, use a DNS-resolvable hostname for the VMware
-provider in the **vCenter Host** field when adding credentials.
-
-</div>
+If both {{ site.data.product.title_short }} and a VMware provider are located in the same IPv6-only network, use a DNS-resolvable hostname for the VMware provider in the **vCenter Host** field when adding credentials.
 
 VMware credentials have several attributes that may be configured:
 
@@ -263,9 +255,6 @@ VMware credentials have several attributes that may be configured:
 
   - **vCenter Host**: The vCenter hostname or IP address to connect to.
 
-<div class="note">
+**Note:**
 
-If the VMware guest tools are not running on the instance, VMware
-inventory sync may not return an IP address for that instance.
-
-</div>
+If the VMware guest tools are not running on the instance, VMware inventory sync may not return an IP address for that instance.

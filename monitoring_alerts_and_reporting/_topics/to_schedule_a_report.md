@@ -3,12 +3,9 @@
 You can view historical data by creating reports on a scheduled basis.
 In addition, scheduled reports can be emailed directly to users.
 
-<div class="note">
+**Note:**
 
-You may need to disable, change the report filter, or change the
-frequency of a schedule. To do this, you will need to edit the schedule.
-
-</div>
+You may need to disable, change the report filter, or change the frequency of a schedule. To do this, you will need to edit the schedule.
 
 There are two ways to schedule a report:
 
@@ -19,10 +16,8 @@ Add a new Schedule through the **Reports** accordion:
 2.  Select a report from the **Reports** accordion and click
     ![1847](../images/1847.png) **Configuration**.
 
-3.  Click ![1862](../images/1862.png) **Add a New Schedule** or click the
-    Schedules accordion and click ![1847](../images/1847.png)
-    **Configuration** \> ![1862](../images/1862.png) **Add a New
-    Schedule**.
+3.  Click ![1862](../images/1862.png) **Add a New Schedule** or click the Schedules accordion and click ![1847](../images/1847.png)
+    **Configuration** \> ![1862](../images/1862.png) **Add a New Schedule**.
 
 or
 
@@ -62,11 +57,10 @@ Adding new Schedule details.
         prompted to select how many hours you want between each
         analysis.
 
-      - Type or select a date to begin the schedule in **Starting
-        Date**.
+      - Type or select a date to begin the schedule in **Starting Date**.
 
       - Select a **Starting Time** based on a 24 hour clock in the
-        {{ site.data.product.title }} appliance’s Time Zone.
+        {{ site.data.product.title_short }} appliance’s Time Zone.
 
 4.  Use the **E-Mail after Running** feature to send an email after the
     report has been generated to selected users. The email will include
@@ -96,11 +90,7 @@ Adding new Schedule details.
 
 6.  Click **Add**.
 
-<div class="note">
+**Note:**
 
-See
-<https://access.redhat.com/documentation/en/red-hat-cloudforms/4.7/paged/general-configuration>
-in the *General Configuration* guide, to learn how to verify the address
-and validate outgoing email settings.
-
-</div>
+See [Outgoing SMTP Email Settings](../general_configuration/index.html#outgoing-smtp-email-settings)
+in the *General Configuration* guide, to learn how to verify the address and validate outgoing email settings.

@@ -1,7 +1,7 @@
 # Adding a Satellite 6 Provider
 
 To start provisioning bare metal machines, you need at least one Red Hat
-Satelllite 6 provider added to {{ site.data.product.title }}.
+Satelllite 6 provider added to {{ site.data.product.title_short }}.
 
 1.  Navigate to menu:Configuration\[Management\].
 
@@ -11,7 +11,7 @@ Satelllite 6 provider added to {{ site.data.product.title }}.
 
 4.  Enter a **URL** for the provider. This is the root URL for the
     Satellite 6 server and can be either an IP address or a hostname.
-    For example, *<http://satellite6.example.com>*.
+    For example, `http://satellite6.example.com`.
 
 5.  Select **Verify Peer Certificate** to use encrypted communication
     with the provider. This requires the **SSL certificates** from your
@@ -28,5 +28,5 @@ Satelllite 6 provider added to {{ site.data.product.title }}.
 
 9.  Click **Add** to confirm your settings and save the provider.
 
-{{ site.data.product.title }} saves the Satellite 6 provider in its database and
+{{ site.data.product.title_short }} saves the Satellite 6 provider in its database and
 triggers a refresh of resources detected in the provider.

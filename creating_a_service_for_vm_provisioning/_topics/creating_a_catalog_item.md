@@ -2,11 +2,11 @@
 
 Create a service catalog item to represent that service in a catalog.
 
-1.  Navigate to menu:Services\[Catalog\].
+1.  Browse to menu: **Services > Catalog**.
 
 2.  Click the **Catalog Items** accordion.
 
-3.  Click ![1847](../images/1847.png)(**Configuration**), and then
+3.  Click **Configuration**, and then
     ![1862](../images/1862.png)(**Add a new Catalog Item**).
 
 4.  Select **RHEV** from the **Catalog Item Type** list.
@@ -40,7 +40,7 @@ Create a service catalog item to represent that service in a catalog.
 
 8.  Click **Add**.
 
-<div class="note">
+**Note:**
 
 In {{ site.data.product.title_short }}, service catalog items can be more complex
 than a single virtual machine and are provisioned through a series of
@@ -49,7 +49,4 @@ gather information from the user requesting the virtual machine, hiding
 all the complexity of the details needed to actually deploy any of the
 components.
 
-</div>
-
-You can now provision a virtual machine through Red Hat Virtualization
-using the Self Service user interface.
+You can now provision a virtual machine through Red Hat Virtualization using the Self Service user interface.

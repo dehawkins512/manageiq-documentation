@@ -6,14 +6,9 @@ IP addresses, which can then be dynamically assigned to an instance. All
 incoming traffic destined for that floating IP is routed to the instance
 to which it has been assigned.
 
-<div class="note">
+**Note:**
 
-Red Hat OpenStack Networking allocates floating IP addresses to all
-projects (tenants) from the same IP ranges/CIDRs. As a result, every
-subnet of floating IPs is consumable by any and all projects. Manage
-this behavior using quotas for specific projects.
-
-</div>
+Red Hat OpenStack Networking allocates floating IP addresses to all projects (tenants) from the same IP ranges/CIDRs. As a result, every subnet of floating IPs is consumable by any and all projects. Manage this behavior using quotas for specific projects.
 
 {% include_relative _topics/adding_floating_ips.md %}
 

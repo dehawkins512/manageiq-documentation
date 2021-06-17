@@ -1,14 +1,12 @@
 ### Deleting a Report
 
 Delete reports when you find that they are no longer useful. Only
-administrators and super administrators of {{ site.data.product.title }} can add,
+administrators and super administrators of {{ site.data.product.title_short }} can add,
 copy, edit, and delete reports.
 
-<div class="note">
+**Note:**
 
 Please note that only customer-created reports can be deleted.
-
-</div>
 
 1.  Navigate to menu:Overview\[Reports\].
 
@@ -19,11 +17,9 @@ Please note that only customer-created reports can be deleted.
     ![1861](../images/1861.png) (**Delete this Report from the
     Database**).
 
-    <div class="note">
+    **Note:**
 
     The **Delete this report from the Database** option will only appear
     on reports you have created. Default reports cannot be deleted.
-
-    </div>
 
 4.  Click **OK**.

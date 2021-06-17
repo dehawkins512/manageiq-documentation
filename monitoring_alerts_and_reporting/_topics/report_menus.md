@@ -5,18 +5,13 @@ have the super administrator or administrator role, you can customize
 the accordions, the folders within them, and the locations of your
 reports.
 
-<div class="note">
+**Note:**
 
-When you create your own report, the report is not automatically
-available. You must add it to a report menu.
+When you create your own report, the report is not automatically available. You must add it to a report menu.
 
-</div>
+The report menu is a hierarchical structure that consists of the following components:
 
-The report menu is a hierarchical structure that consists of the
-following components:
-
-  - The top level, under which the accordions are shown. (Top level is
-    only displayed when you are in the report menu editor.)
+  - The top level, under which the accordions are shown. (Top level is only displayed when you are in the report menu editor.)
 
   - Accordions that are general categories for the reports. The defaults
     supplied are **Configuration Management**, **Migration Readiness**,

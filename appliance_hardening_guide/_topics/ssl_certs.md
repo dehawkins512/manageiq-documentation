@@ -28,7 +28,7 @@ For example:
     Country Name (2 letter code) [XX]:US
     State or Province Name (full name) []:North Carolina
     Locality Name (eg, city) [Default City]:Raleigh
-    Organization Name (eg, company) [Default Company Ltd]:{{ site.data.product.title }}
+    Organization Name (eg, company) [Default Company Ltd]:{{ site.data.product.title_short }}
     Organizational Unit Name (eg, section) []:Customer Content Services
     Common Name (eg, your name or your server's hostname) []:$(hostname)
     Email Address []:example@example.com
@@ -73,7 +73,7 @@ After the certificate and key files have been copied, restart the appliance:
 
 The appliance now uses your own certificate.
 
-If your environment consists of multiple appliances connecting to a single database appliance, you can use your certificate and key files to set up SSL for the database connection. For more information, see [Configuring the Database to use SSL](#_chap_red_hat_cloudforms_security_guide_setting_ssl_for_the_database_appliance).
+If your environment consists of multiple appliances connecting to a single database appliance, you can use your certificate and key files to set up SSL for the database connection. For more information, see [Configuring the Database to use SSL](#configuring-the-database-to-use-ssl).
 
 **Important:**
 
@@ -81,6 +81,6 @@ Updates from the Red Hat Content Delivery Network might overwrite these certific
 
 **Note:**
 
-See also the following article for information on replacing SSL certificates in {{ site.data.product.title }} :
+See also the following article for information on replacing SSL certificates in {{ site.data.product.title_short }} :
 <https://access.redhat.com/articles/449033>.
 

@@ -25,18 +25,13 @@ profile. When an end user accesses the virtual IP, it directs traffic to
 the appropriate {{ site.data.product.title_short }} appliance based on the configured
 HAProxy policy.
 
-<div class="note">
+**Note:**
 
 Additional configuration is required to run HAProxy on Red Hat OpenStack
-Platform. See the [OpenStack Networking
-Guide](https://access.redhat.com/documentation/en/red-hat-openstack-platform/10/single/networking-guide/)
+Platform. See the [OpenStack Networking Guide](https://access.redhat.com/documentation/en/red-hat-openstack-platform/10/single/networking-guide/)
 for more information.
 
-</div>
-
-This configuration uses two HAProxy servers and a virtual IP (configured
-by `keepalived`). The following example procedure uses the following IP
-addresses and names; substitute values for your environment as needed:
+This configuration uses two HAProxy servers and a virtual IP (configured by `keepalived`). The following example procedure uses the following IP addresses and names; substitute values for your environment as needed:
 
   - HAProxy1: 10.19.137.131 (cf-hap1.example.com)
 
@@ -52,8 +47,7 @@ addresses and names; substitute values for your environment as needed:
     (cfme2.example.com)
 
 The following diagram shows the HAProxy configuration in this procedure:
-![cloudforms ha architecture 431939 0917 ece
-01](../images/cloudforms_ha_architecture_431939_0917_ece-01.png)
+![ha architecture 431939 0917 ece 01](../images/ha_architecture_431939_0917_ece-01.png)
 
 To configure HAProxy load balancing:
 
@@ -89,15 +83,13 @@ To configure HAProxy load balancing:
 
     1.  On the `cf-hap1` server, run the following:
 
-        <div class="note">
+        **Note:**
 
         `keepalived` uses VRRP (Virtual Redundancy Router Protocol) to
         monitor the servers and determine which node is the master and
         which node is the backup. VRRP communication between routers
         uses multicast IPv4 address 224.0.0.18 and IP protocol number
         112.
-
-        </div>
 
             [root@cf-hap1 ~]# firewall-cmd --permanent  --add-port=80/tcp --add-port=443/tcp --add-port=8443/tcp && firewall-cmd --reload
 
@@ -258,7 +250,7 @@ To configure HAProxy load balancing:
           server cfme1 10.19.137.130:8443 check inter 1s
           server cfme2 10.19.137.129:8443  check inter 1s
 
-    <div class="note">
+    **Note:**
 
       - The virtual IP in this configuration is 10.19.137.135
         (cf-haproxy.example.com).
@@ -269,10 +261,7 @@ To configure HAProxy load balancing:
       - The IP of {{ site.data.product.title_abbr_uc }} Appliance 2 is 10.19.137.129
         (cfme2.example.com).
 
-    </div>
-
-7.  Configure the appropriate IPs for load balancing on the `cf-hap2`
-    server as well:
+7.  Configure the appropriate IPs for load balancing on the `cf-hap2` server as well:
 
         [root@cf-hap2 ~]# cat /etc/haproxy/haproxy.cfg
         global
@@ -400,7 +389,7 @@ Your environment is now configured for high availability.
 
 <div class="important">
 
-The following additional configuration in the {{ site.data.product.title }} user
+The following additional configuration in the {{ site.data.product.title_short }} user
 interface worker appliances and the load balancer are recommended for
 improved performance in worker appliances:
 

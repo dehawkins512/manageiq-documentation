@@ -108,22 +108,18 @@ database cluster to re-configure the database replication:
     5.  Enter the new primary database-only appliance hostname or IP
         address.
 
-        <div class="note">
+        **Note:**
 
         The hostname or IP address must be visible to all appliances
         that communicate with this database, including the non-database
         {{ site.data.product.title_short }} appliances and any global region
         databases.
 
-        </div>
-
-    6.  Confirm that the replication server configuration details are
-        correct, and select `y` to apply the configuration.
+    6.  Confirm that the replication server configuration details are correct, and select `y` to apply the configuration.
 
 #### Configuring the Standby Database-Only Appliance
 
-The steps to re-configure the standby database-only appliances are
-similar to that of the primary database-only appliance, in that they
+The steps to re-configure the standby database-only appliances are similar to that of the primary database-only appliance, in that they
 prepare the appliance to be database-only, but as the standby.
 
 On the standby database-only appliances, configure the following:
@@ -154,16 +150,13 @@ On the standby database-only appliances, configure the following:
     6.  Enter the new standby database-only appliance hostname or IP
         address.
 
-        <div class="note">
+        **Note:**
 
         The hostname or IP address must be visible to all appliances
         that communicate with this database, including the engine
         appliances and any global region databases.
 
-        </div>
-
-    7.  Select `y` to configure the replication manager for automatic
-        failover.
+    7.  Select `y` to configure the replication manager for automatic failover.
 
     8.  Confirm that the replication standby server configuration
         details are correct, and select `y` to apply the configuration.
@@ -202,12 +195,9 @@ reconfigure `database.yml` before restarting.
 
     2.  Select **Start Database Failover Monitor**.
 
-<div class="note">
+**Note:**
 
-You can view a summary of the updated appliances by running `repmgr
-cluster show` on one of the database appliances.
-
-</div>
+You can view a summary of the updated appliances by running `repmgr cluster show` on one of the database appliances.
 
 Your {{ site.data.product.title_short }} environment is now re-configured for high
 availability.

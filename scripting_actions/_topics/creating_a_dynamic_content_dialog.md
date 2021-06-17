@@ -7,13 +7,11 @@ The procedure describes the steps to create a dynamic content dialog.
 2.  From the accordion menu, click menu:DOMAIN\[Cloud \> VM \>
     Operations \> Methods\].
 
-    <div class="note">
+    **Note:**
 
     DOMAIN must be a user-defined Domain and not the locked ManageIQ
     Domain. If necessary, you can copy the class from the ManageIQ
     domain into a custom domain.
-
-    </div>
 
     This example uses the **Cloud** Namespace but can also use the
     **Infrastructure** namespace.

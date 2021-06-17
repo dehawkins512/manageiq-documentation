@@ -12,19 +12,17 @@ to stability, security, or performance. A glance at the display allows
 users to sort by category, view details of the impact and resolution,
 and then quickly determine what systems are affected.
 
-<div class="note">
+**Note:**
 
   - To use Red Hat Insights, the {{ site.data.product.title_short }} appliance must
     be registered to Red Hat Subscription Management or Satellite
     (version 6.1 or newer).
 
   - Red Hat Insights is available as a technology preview in this
-    release of {{ site.data.product.title }}. For more information on the support
+    release of {{ site.data.product.title_short }}. For more information on the support
     scope for features marked as technology previews, see [Technology
     Preview Features Support
     Scope](https://access.redhat.com/support/offerings/techpreview/).
-
-</div>
 
 The Red Hat Insights plugin has the following options:
 

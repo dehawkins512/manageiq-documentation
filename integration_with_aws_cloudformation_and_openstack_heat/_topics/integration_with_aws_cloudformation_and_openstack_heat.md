@@ -1,6 +1,6 @@
 ## Integration with AWS CloudFormation and OpenStack Heat
 
-{{ site.data.product.title }} integration with AWS CloudFormation and OpenStack Heat
+{{ site.data.product.title_short }} integration with AWS CloudFormation and OpenStack Heat
 provides an ability to:
 
   - Inventory all **AWS CloudFormation** and **OpenStack Heat** stacks
@@ -12,10 +12,6 @@ provides an ability to:
 
   - Model the stack and its elements in the UI.
 
-<div class="note">
+**Note:**
 
-When importing a template into {{ site.data.product.title }}, the selected elements
-are converted according to their type. For example, lists convert to
-list boxes, and single items convert to text boxes.
-
-</div>
+When importing a template into {{ site.data.product.title_short }}, the selected elements are converted according to their type. For example, lists convert to list boxes, and single items convert to text boxes.

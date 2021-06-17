@@ -3,9 +3,9 @@
 If multiple hosts have the same settings or credentials, edit them at
 the same time.
 
-1.  Navigate to menu:Compute\[Infrastructure \> Hosts\].
+1.  Browse to menu: **Compute > Infrastructure > Hosts**.
 
-2.  Click ![1847](../images/1847.png) (**Configuration**).
+2.  Click **Configuration**.
 
 3.  Check the Hosts to edit.
 
@@ -30,15 +30,11 @@ the same time.
         calls made directly to the host system. If this is not supplied,
         **Default** credentials are used.
 
-        <div class="note">
+        **Note:**
 
-        Login credentials are required for performing SmartState
-        Analysis on the host’s virtual machines and templates.
+        Login credentials are required for performing SmartState Analysis on the host’s virtual machines and templates.
 
-        </div>
-
-        For each type of credential used, the following information is
-        required:
+        For each type of credential used, the following information is required:
 
       - Use **User ID** to specify a login ID.
 

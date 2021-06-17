@@ -1,6 +1,6 @@
-## Installing {{ site.data.product.title }}
+## Installing {{ site.data.product.title_short }}
 
-Installing {{ site.data.product.title }} consists of the following steps:
+Installing {{ site.data.product.title_short }} consists of the following steps:
 
 1.  Downloading the VHD image to your SCVMM Library.
 
@@ -102,7 +102,7 @@ appliance, then deploy a virtual machine to run the appliance.
         Update-SCVMConfiguration -VMConfiguration $vmc
         New-SCVirtualMachine -Name $vmName -VMConfiguration $vmc
 
-    <div class="note">
+    **Note:**
 
     Substitute these values in your PowerShell script:
 
@@ -114,7 +114,4 @@ appliance, then deploy a virtual machine to run the appliance.
 
       - $vmName = "NAME\_OF\_YOUR\_NEW\_VM"
 
-    </div>
-
-Your SCVMM environment now contains a running {{ site.data.product.title_short }}
-appliance which you can configure.
+Your SCVMM environment now contains a running {{ site.data.product.title_short }} appliance which you can configure.

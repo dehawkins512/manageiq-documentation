@@ -1,7 +1,7 @@
 ## Installing the Appliances
 
 This chapter outlines the steps for installing and configuring the
-{{ site.data.product.title }} components needed for high availability: a database
+{{ site.data.product.title_short }} components needed for high availability: a database
 cluster comprised of primary and standby database-only appliances, and
 two (at minimum) non-database {{ site.data.product.title_short }} appliances.
 
@@ -12,9 +12,7 @@ the non-database {{ site.data.product.title_short }} appliances.
 
 1.  Deploy a {{ site.data.product.title_short }} appliance with an extra (and
     unpartitioned) disk for the database at a size appropriate for your
-    deployment. For recommendations on disk space, see [Database
-    Requirements](https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.7/html/deployment_planning_guide/introduction#database-requirements)
-    in the *Deployment Planning Guide*.
+    deployment. For recommendations on disk space, see [Database Requirements](../deployment_planning_guide/index.html#database-requirements) in the *Deployment Planning Guide*.
 
 2.  Configure time synchronization on the appliance by editing
     `/etc/chrony.conf` with valid NTP server information.
@@ -38,7 +36,14 @@ the non-database {{ site.data.product.title_short }} appliances.
 
     1.  Configure the hostname by selecting **Set Hostname**.
 
-    2.  Select **Configure Database**.
+    For standard {{ site.data.product.title_short }} installations, a pre-sized database disk is already attached, initialized, encryption key generated, database configured with a region, and the application started.
+
+    2. Select **Stop evm server processes**, select `y`.
+    3. Quit from appliance console and `run systemctl disable evmserverd` to make this a standalone database server.
+
+    Alternatively, if you attached a new database disk and have not yet configured the application:
+
+    2.  Select **Configure Application**.
 
     3.  Select **Create key** to create the encryption key. You can
         create a new key, or use an existing key on your system by
@@ -57,19 +62,15 @@ the non-database {{ site.data.product.title_short }} appliances.
         will not run. This is required in highly available database
         deployments.
 
-        <div class="warning">
-
+        **Warning:**
+        
         This configuration is not reversible.
-
-        </div>
 
     7.  Create the database password.
 
-<div class="note">
+**Note:**
 
 Do not create a region at this stage in the procedure.
-
-</div>
 
 You have now created the empty database.
 
@@ -128,7 +129,7 @@ and secondary database-only appliances can be configured.
 
     1.  Configure the hostname by selecting **Set Hostname**.
 
-    2.  Select **Configure Database**.
+    2.  Select **Configure Application**.
 
     3.  Configure this appliance to use the encryption key from the
         primary database-only appliance:
@@ -215,17 +216,14 @@ Run these steps from the appliance console:
     5.  Enter the primary database-only appliance hostname or IP
         address.
 
-        <div class="note">
+        **Note:**
 
         The hostname must be visible to all appliances that communicate
         with this database, including the non-database
         {{ site.data.product.title_short }} appliances and any global region
         databases.
 
-        </div>
-
-    6.  Confirm that the replication server configuration details are
-        correct, and select `y` to apply the configuration.
+    6.  Confirm that the replication server configuration details are correct, and select `y` to apply the configuration.
 
 This configures database replication in the cluster.
 
@@ -238,12 +236,8 @@ case of failure.
 Follow these steps to create a new standby appliance, or to add another
 standby appliance to the cluster.
 
-1.  Deploy a {{ site.data.product.title_short }} appliance with an extra (and
-    unpartitioned) disk for the database that is the same size as the
-    primary database-only appliance, as it will contain the same data.
-    For recommendations on disk space, see [Database
-    Requirements](https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.7/html/deployment_planning_guide/introduction#database-requirements)
-    in the *Deployment Planning Guide*.
+1.  Deploy a {{ site.data.product.title_short }} appliance with an extra (and unpartitioned) disk for the database that is the same size as the primary database-only appliance, as it will contain the same data.
+    For recommendations on disk space, see [Database Requirements](../deployment_planning_guide/index.html#database-requirements) in the *Deployment Planning Guide*.
 
 2.  Configure time synchronization on the appliance by editing
     `/etc/chrony.conf` with valid NTP server information.
@@ -304,16 +298,13 @@ appliance console:
     6.  Enter the standby database-only appliance hostname or IP
         address.
 
-        <div class="note">
+        **Note:**
 
         The hostname must be visible to all appliances that communicate
         with this database, including the engine appliances and any
         global region databases.
 
-        </div>
-
-    7.  Select `y` to configure the replication manager for automatic
-        failover.
+    7.  Select `y` to configure the replication manager for automatic failover.
 
     8.  Confirm that the replication standby server configuration
         details are correct, and select `y` to apply the configuration.
@@ -356,7 +347,7 @@ and any additional appliances in the region using the following steps:
 
     1.  Configure the hostname by selecting **Set Hostname**.
 
-    2.  Select **Configure Database**.
+    2.  Select **Configure Application**.
 
     3.  Configure this appliance to use the encryption key from the
         primary database-only appliance:

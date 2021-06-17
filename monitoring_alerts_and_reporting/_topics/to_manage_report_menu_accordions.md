@@ -27,7 +27,7 @@
       - Click ![add](../images/add.png) **(Add folder to selected
         folder)** to add an folder.
 
-        <div class="note">
+        **Note:**
 
         If you are creating a new folder, **Top Level** must be selected
         under **Reports**. Be sure to select the folder you want to
@@ -35,13 +35,8 @@
         double-click on **New Folder**, then click on **Top Level** in
         the **Reports** area.
 
-        </div>
-
-5.  When you are finished adding folders, click **Commit**. To revert,
-    click **Discard**.
+5.  When you are finished adding folders, click **Commit**. To revert, click **Discard**.
 
 6.  Click **Save**.
 
-The new folder is added, and you can add folders in which to store
-reports to it. You can also organize the reports into folder that are
-meaningful to you.
+The new folder is added, and you can add folders in which to store reports to it. You can also organize the reports into folder that are meaningful to you.

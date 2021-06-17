@@ -2,17 +2,15 @@
 
 If you have multiple VMDBs, you can export policies, policy profiles, or
 alerts from one to another. You can export and import for use with other
-{{ site.data.product.title }} infrastructures.
+{{ site.data.product.title_short }} infrastructures.
 
-<div class="note">
+**Note:**
 
 The appliances you are exporting or importing data between must use the
 same {{ site.data.product.title_short }} version.
 
-</div>
-
 1.  Copy the file to import to a location that is accessible to your
-    {{ site.data.product.title }} console.
+    {{ site.data.product.title_short }} console.
 
 2.  Navigate to menu:Control\[Import/Export\].
 

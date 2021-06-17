@@ -1,6 +1,6 @@
 ## Overview
 
-{{ site.data.product.title }} integration with ServiceNow enables authentication with
+{{ site.data.product.title_short }} integration with ServiceNow enables authentication with
 an existing ServiceNow database and **add/amend** items in the
 ServiceNow database during state machine processing, such as the virtual
 machine provisioning state machine. Note that information in this guide
@@ -25,9 +25,7 @@ You can manage records in the **CMDB\_CI\_SERVER** table, including
 | update        | Get specified record, update required attributes and post updated record. |
 | update\_patch | Post required attributes to specified record.                             |
 
-<div class="note">
+**Note:**
 
 Configuration item (CI) and record are used interchangeably and refer to
 items in a ServiceNow database table.
-
-</div>

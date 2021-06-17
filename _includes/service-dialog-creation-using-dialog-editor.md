@@ -1,4 +1,4 @@
-{{ site.data.product.title }} includes a drag-and-drop service dialog editor to create
+{{ site.data.product.title_short }} includes a drag-and-drop service dialog editor to create
 service dialogs. The editor, with its drag-and-drop feature, provides a
 visual representation of the components that comprise a service dialog.
 You can easily design your service dialog utilizing dialog tabs,
@@ -29,19 +29,16 @@ A service dialog contains three components:
     drop-down lists or text fields, to fill in the options on the
     provisioning dialog.
 
-<div class="important">
+**Important:**
 
-The names of the elements must correspond to the options used in the
-provisioning dialog.
+The names of the elements must correspond to the options used in the provisioning dialog.
 
-</div>
-
-1.  Navigate to menu:Automation\[Automate \> Customization\].
+1.  Browse to menu: **Automation > Automate > Customization**.
 
 2.  Click the **Service Dialogs** accordion.
 
-3.  Click ![1847](../images/1847.png)(**Configuration**), and then
-    ![1862](../images/1862.png)(**Add a new Dialog**).
+3.  Click **Configuration**, and then
+    ![1862](../images/1862.png)**Add a new Dialog**.
 
     ![edit section1](../images/edit-section1.png)
 
@@ -98,32 +95,22 @@ provisioning dialog.
 
         <div class="important">
 
-        Element names must correspond to the options used in the
-        provisioning dialog. **Name** must use only alphanumeric
-        characters and underscores without spaces. It is also used to
-        retrieve the value of this element in the method used with the
+        Element names must correspond to the options used in the provisioning dialog. **Name** must use only alphanumeric characters and underscores without spaces. It is also used to retrieve the value of this element in the method used with the
         dialog and must start with **dialog\_service\_type**.
 
         </div>
 
-    3.  Optional: Add additional information in **Help** to assist the
-        user to complete the fields in the service dialog. This field is
-        useful for explaining unfamiliar terminology or providing
-        configuration tips. This information is presented when you hover
-        over the \[\!\] exclamation mark in the Service Dialog while
-        ordering a Service Catalog later.
+    3.  Optional: Add additional information in **Help** to assist the user to complete the fields in the service dialog. This field is useful for explaining unfamiliar terminology or providing configuration tips. This information is presented when you hover
+        over the \[\!\] exclamation mark in the Service Dialog while ordering a Service Catalog later.
 
     4.  Set other options as required.
 
     5.  Click **Save**.
 
-8.  Optional: Repeat the above step to add more elements to the existing
-    section, or create and add elements to a new section as required.
+8.  Optional: Repeat the above step to add more elements to the existing section, or create and add elements to a new section as required.
 
-9.  Optional: Repeat the step to add a new tab to the dialog, and
-    subsequent steps to add sections and elements to it as required.
+9.  Optional: Repeat the step to add a new tab to the dialog, and subsequent steps to add sections and elements to it as required.
 
 10. Click **Save** to create the dialog.
 
-The service dialog is now created, and added to the **Service Dialogs**
-accordion.
+The service dialog is now created, and added to the **Service Dialogs** accordion.

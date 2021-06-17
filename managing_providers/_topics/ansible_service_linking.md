@@ -1,6 +1,6 @@
 ## Ansible Service Linking
 
-{{ site.data.product.title }} provides a module allowing inventoried resources such as
+{{ site.data.product.title_short }} provides a module allowing inventoried resources such as
 virtual machines created using Ansible playbooks to link back to the
 services used to generate them. During service ordering of a playbook
 the `add_provider_vms` module will allow the playbook to connect back to
@@ -24,21 +24,13 @@ to Amazon EC2 and linked back to the service. Examples are provided for
 linking the resource to its service by both an *href slug* and as an
 object.
 
-<div class="note">
+**Note:**
 
-  - This example utilizes the \`syncrou.manageiq-vmdb\`role. This role
-    allows {{ site.data.product.title_short }} users to modify and/or change VMDB
-    objects using an Ansible playbook. For information on implementing
-    and utilizing roles when writing Ansible playbooks for
-    {{ site.data.product.title_short }}, see [???](#installing-ansible-roles).
+  - This example utilizes the \`syncrou.manageiq-vmdb\` role. This role allows {{ site.data.product.title_short }} users to modify and/or change VMDB objects using an Ansible playbook. For information on implementing and utilizing roles when writing Ansible playbooks for {{ site.data.product.title_short }}, see [Installing Ansible Roles](https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.1/html/administration_guide/chap-Automating_RHV_Configuration_using_Ansible#Installing_Ansible_Roles).
 
-  - For more information on Ansible Galaxy and roles, see the [Ansible
-    Galaxy
-    documentation](http://docs.ansible.com/ansible/latest/galaxy.html).
+  - For more information on Ansible Galaxy and roles, see the [Ansible Galaxy documentation](http://docs.ansible.com/ansible/latest/galaxy.html).
 
   - Note the provider ID in order to successfully link to the service.
-
-</div>
 
 1.  Create and register the resource.
 

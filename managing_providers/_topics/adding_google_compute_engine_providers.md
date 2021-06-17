@@ -1,12 +1,12 @@
 # Adding Google Compute Engine Providers
 
-After initial installation and creation of a {{ site.data.product.title }}
+After initial installation and creation of a {{ site.data.product.title_short }}
 environment, add a Google Compute Engine provider by following this
 procedure.
 
 **Prerequisites.**
 
-To add a Google Compute Engine provider to {{ site.data.product.title }}, you need:
+To add a Google Compute Engine provider to {{ site.data.product.title_short }}, you need:
 
   - A Google Cloud Platform account
 
@@ -15,17 +15,13 @@ To add a Google Compute Engine provider to {{ site.data.product.title }}, you ne
 
   - A service account JSON key for your project
 
-    <div class="note">
+    **Note:**
 
     You can generate a private JSON key for your project in menu:IAM &
     Admin\[Service Accounts\] in Google Cloud Platform. This key is used
     to authenticate against your provider.
 
-    For additional information, see the Google Cloud Platform
-    documentation at
-    <https://cloud.google.com/storage/docs/authentication>.
-
-    </div>
+    For additional information, see the [Google Cloud Platform](https://cloud.google.com/storage/docs/authentication) documentation.
 
 <!-- end list -->
 
@@ -43,23 +39,16 @@ To add a Google Compute Engine provider to {{ site.data.product.title }}, you ne
 6.  Enter your Google Compute Engine Project ID for **Project**.
 
 7.  Select the appropriate **Zone** if you have more than one available.
-    Red Hat recommends creating a new zone for your Google Compute
-    Engine provider.
+    Red Hat recommends creating a new zone for your Google Compute Engine provider.
 
-8.  Copy your project’s **Service Account** JSON key contents to the
-    **Service Account JSON** field.
+8.  Copy your project’s **Service Account** JSON key contents to the **Service Account JSON** field.
 
 9.  Click **Validate** to validate the credentials.
 
 10. Click **Add**.
 
-<div class="note">
+**Note:**
 
-Make sure that NTP synchronization is enabled and working. When clocks
-are not synchronized, the following error will be raised:
+Make sure that NTP synchronization is enabled and working. When clocks are not synchronized, the following error will be raised:
 
-`Credential validation was not successful: Authorization failed. Server
-message: { "error" : "invalid_grant", "error_description" : "Invalid
-JWT: Token must be a short-lived token and in a reasonable timeframe" }`
-
-</div>
+`Credential validation was not successful: Authorization failed. Server message: { "error" : "invalid_grant", "error_description" : "Invalid JWT: Token must be a short-lived token and in a reasonable timeframe" }`

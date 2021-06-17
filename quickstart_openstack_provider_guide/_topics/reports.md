@@ -1,15 +1,15 @@
-{{ site.data.product.title }} provides a large group of default reports organized into
+{{ site.data.product.title_short }} provides a large group of default reports organized into
 categories. Each category has its own set of subfolders. These reports
 have been constructed to help you view the most commonly requested and
 significant data.
 
-The categories of predefined reports available on {{ site.data.product.title }} are:
+The categories of predefined reports available on {{ site.data.product.title_short }} are:
 
 {% include reports-categories.md %}
 
 For more detailed information on managing reports, see [Monitoring,
 Alerts, and
-Reporting](https://access.redhat.com/documentation/en/red-hat-cloudforms/4.7/single/monitoring-alerts-and-reporting/).
+Reporting](../monitoring_alerts_and_reporting/index.html).
 
 ### Generating a Single Report
 

@@ -1,8 +1,8 @@
 ## Planning
 
 This guide provides some general guidelines to planning a deployment on
-{{ site.data.product.title }}. This includes creating multiple regions containing
-{{ site.data.product.title }} appliances, CPU sizing recommendations, database sizing
+{{ site.data.product.title_short }}. This includes creating multiple regions containing
+{{ site.data.product.title_short }} appliances, CPU sizing recommendations, database sizing
 recommendations, and database configuration.
 
 ### Regions
@@ -35,7 +35,7 @@ resources can be adjusted according to the workload those roles are
 responsible for.
 
 The following diagram demonstrates an example of the multiple regions
-working together in a {{ site.data.product.title }} environment.
+working together in a {{ site.data.product.title_short }} environment.
 
 ![7151](../images/7151.png)
 
@@ -45,35 +45,31 @@ technology center contains a single subregion that manages two zones.
 Likewise, the San Diego technology center contains a single subregion
 managing a single zone.
 
-<div class="note">
+**Note:**
 
   - Replicating a parent region to a higher-level parent is not
     supported.
 
   - Parent regions can be configured after the child regions are online.
 
-</div>
-
 The following diagram provides a closer look at a region:
 
 ![7150](../images/7150.png)
 
-In this region, we have several {{ site.data.product.title }} appliances acting as UI
+In this region, we have several {{ site.data.product.title_short }} appliances acting as UI
 nodes and worker nodes. These worker nodes execute tasks on the
 providers in your environment. The region also uses a region database
-that reports to a master database on the main {{ site.data.product.title }} appliance.
+that reports to a master database on the main {{ site.data.product.title_short }} appliance.
 All appliances can connect to the authentication services (Active
 Directory, LDAP, Identity Management), outgoing mail (SMTP), and network
 services (SNMP).
 
-<div class="note">
+**Note:**
 
 {{ site.data.product.title_short }} can be configured in a highly available setup. In
 this case, all PostgreSQL instances must be running on a server that is
 deployed from the {{ site.data.product.title_short }} appliance. High availability is
 achieved by database replication between two or more database servers.
-
-</div>
 
 ### Roles
 
@@ -86,9 +82,7 @@ server roles start worker processes.
 Some roles are also dependent on other roles. For example, because the
 {{ site.data.product.title_short }} user interface relies on the API for access, the
 Web Services role must be enabled with the User Interface role for users
-to log in to the appliance. See [Server
-Roles](https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.7/html/general_configuration/configuration#server-roles)
-in *General Configuration* for details on each server role and its
+to log in to the appliance. See [Server Roles](../general_configuration/index.html#server-roles) in *General Configuration* for details on each server role and its
 function.
 
 #### Appliance Types
@@ -97,8 +91,7 @@ Depending on the needs of your environment, you may choose to separate
 worker and database tasks between appliances. One example of this is to
 implement a highly available configuration so that certain appliances
 are running the PostgreSQL database and providing failover. For more
-details about configuring high availability, see the [*High Availability
-Guide*](https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.7/html-single/high_availability_guide/).
+details about configuring high availability, see the [High Availability Guide](../high_availability_guide/index.html).
 
 The following provides a summary of types of appliances:
 
@@ -113,7 +106,7 @@ Appliance types
 
 ### Centralized Administration
 
-{{ site.data.product.title }} includes centralized administration capabilities, where
+{{ site.data.product.title_short }} includes centralized administration capabilities, where
 certain operations can be initiated from the global region and processed
 and executed on remote regions. From the global region, you can also
 access the user interfaces of virtual machines residing in remote
@@ -136,13 +129,11 @@ global region using centralized administration:
 
   - Opening a virtual machine in the remote region
 
-<div class="note">
+**Note:**
 
 {{ site.data.product.title_short }} life cycle operations other than those listed
 above are not supported. Centralized administration capabilities are not
 supported from the Self Service user interface.
-
-</div>
 
 With centralized administration, the remote\_queue\_put leverages a new
 system-to-system REST API request to forward the original request to the
@@ -154,7 +145,7 @@ remote region.
 
 ![Centralized Administration Diagram](../images/centralized_admin.png)
 
-<div class="note">
+**Note:**
 
 The operations initiated from the global region are subject to the
 role-based access control (RBAC) rules on the remote region. The user in
@@ -162,11 +153,9 @@ the remote region which matches the logged-in user’s **user ID** will be
 used to enforce RBAC in the target region. The operation will fail on
 the remote system if the user does not have the required permissions.
 
-</div>
-
 ### Tenancy
 
-{{ site.data.product.title }} supports multitenancy. Tenants can be totally separate
+{{ site.data.product.title_short }} supports multitenancy. Tenants can be totally separate
 or they can be in a parent-child or peer relationship. Tenants in a
 relationship can share or inherit a certain configuration. You can
 subdivide and create child tenants and they, in turn, can have child
@@ -180,14 +169,12 @@ A tenant can also contain a self-contained child tenant known as a
 allocating resources to a small group or team within a larger
 organization.
 
-<div class="note">
+**Note:**
 
 If you do not add any additional tenants, all resources and user
 accounts are contained in a single base tenant which is your
 {{ site.data.product.title_short }} appliance itself. In {{ site.data.product.title_short }}, is
 sometimes referred as 'tenant zero'.
-
-</div>
 
 **Tenancy Account Roles.**
 
@@ -265,14 +252,12 @@ You can allocate and enforce quotas for the following attributes:
 You can generate or schedule a report for **Tenant Quotas** similar to
 other reports.
 
-<div class="note">
+**Note:**
 
 Currently, in tenant quota reports you will see all of the tenants but
 there is no nesting information available by parent and child tenants.
 
-</div>
-
-**Example:.**
+**Example:**
 
 In the following example of a tenant quota report, *DevOps Teams* is a
 parent tenant and *Team Alpha* and *Team Bravo* are child tenants.
@@ -375,7 +360,7 @@ interface appliance behind the load balancer.
 
 ### Database Configuration
 
-This section describes the {{ site.data.product.title }} PostgreSQL database
+This section describes the {{ site.data.product.title_short }} PostgreSQL database
 configuration. The below table provides information on each file: its
 location, primary function, and notes regarding behavior or
 recommendations.
@@ -399,7 +384,7 @@ configurations are not overwritten on {{ site.data.product.title_short }} upgrad
 The following file name example follows `01_miq_overrides.conf`
 alphabetically in the `/etc/manageiq/postgresql.conf.d` directory:
 
-**Example.**
+**Example:**
 
     test_miq_overrides.conf
 
@@ -413,6 +398,6 @@ information.
 The following example queries the {{ site.data.product.title_short }} for current
 value set for `max_wal_senders`:
 
-**Example.**
+**Example:**
 
     `psql -d vmdb_production -c 'show max_wal_senders'

@@ -32,13 +32,11 @@
         select the folder that you want the subfolder to show under. To
         name the folder, double-click on `New Folder`.
 
-6.  When you are finished making changes click **Commit**. To revert,
-    click **Discard**.
+6.  When you are finished making changes click **Commit**. To revert, click **Discard**.
 
 7.  Click **Save**.
 
-<div class="note">
+**Note:**
 
 Only reports that are not already in another folder can be assigned.
 
-</div>

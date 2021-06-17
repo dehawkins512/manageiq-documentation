@@ -1,6 +1,6 @@
 ### Chargeback Rates
 
-{{ site.data.product.title }} provides a default set of rates for calculating
+{{ site.data.product.title_short }} provides a default set of rates for calculating
 chargeback costs, but you can create your own set of computing and
 storage costs by navigating to menu:Overview\[Chargeback\] and clicking
 the **Rates** accordion.
@@ -146,7 +146,7 @@ set at $0.10 per GB per day, the Storage Used Cost would be $25.
 
   - 250 GB \* $0.10 (per GB per day) = $25 Storage Used Cost
 
-<div class="note">
+**Note:**
 
 The following chargeback rates are not supported for containers
 providers:
@@ -159,4 +159,3 @@ providers:
 
   - Allocated memory
 
-</div>

@@ -1,6 +1,6 @@
 # Loading a Report Filter or Search Expression
 
-1.  Navigate to menu:Compute\[Clouds \> Instances\].
+1.  Browse to menu: **Compute > Clouds > Instances**.
 
 2.  Click the accordion for the items to search (either **Instances** or
     **Images**).
@@ -12,17 +12,13 @@
 
 5.  Select either a saved instance search or an instance report filter.
 
-    <div class="note">
+    **Note:**
 
-    The set of items to select will depend on the type of resource you
-    are searching.
-
-    </div>
+    The set of items to select will depend on the type of resource you are searching.
 
 6.  Click **Load** to load the search expression.
 
-7.  If you want to edit the expression, click on it and make any edits
-    for the current expression.
+7.  If you want to edit the expression, click on it and make any edits for the current expression.
 
       - Click ![1863](../images/1863.png) (**Commit expression element
         changes**) to add the changes.

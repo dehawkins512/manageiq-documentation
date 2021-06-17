@@ -8,7 +8,7 @@ provider, you can pause the provider to prevent {{ site.data.product.title_short
 from connecting to it, to avoid generating log errors or collecting
 partial data.
 
-<div class="note">
+**Note:**
 
   - While the provider is paused no data will be collected from it. This
     may cause gaps in inventory, metrics and events.
@@ -17,8 +17,6 @@ partial data.
     temporarily disables the link between {{ site.data.product.title_short }} and the
     provider. Resuming the provider re-enables the link between
     {{ site.data.product.title_short }} and the provider.
-
-</div>
 
 To pause a containers provider:
 

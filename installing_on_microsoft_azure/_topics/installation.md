@@ -1,6 +1,6 @@
-## Installing {{ site.data.product.title }}
+## Installing {{ site.data.product.title_short }}
 
-Installing {{ site.data.product.title }} consists of the following steps:
+Installing {{ site.data.product.title_short }} consists of the following steps:
 
 1.  Downloading the appliance for your environment as a virtual machine
     image template.
@@ -13,9 +13,9 @@ After you have completed all the procedures in this guide, you will have
 a working environment on which additional customizations and
 configurations can be performed.
 
-### Obtaining the {{ site.data.product.title }} Virtual Appliance
+### Obtaining the {{ site.data.product.title_short }} Virtual Appliance
 
-### Uploading and Provisioning the {{ site.data.product.title }} Virtual Appliance in Microsoft Azure
+### Uploading and Provisioning the {{ site.data.product.title_short }} Virtual Appliance in Microsoft Azure
 
 You can upload and provision the appliance in an Azure environment using
 the following two methods:
@@ -24,11 +24,11 @@ the following two methods:
 
   - Using the Azure Command-Line Interface (Azure CLI)
 
-To upload the {{ site.data.product.title }} appliance file in Microsoft Azure, ensure
+To upload the {{ site.data.product.title_short }} appliance file in Microsoft Azure, ensure
 the following requirements are met:
 
   - Approximately 2 GB of space for each VHD image; 44+ GB of space, 12
-    GB RAM, and 4 VCPUs for the {{ site.data.product.title }} appliance.
+    GB RAM, and 4 VCPUs for the {{ site.data.product.title_short }} appliance.
 
   - [Microsoft Azure Account](https://azure.microsoft.com/en-us/free/).
 
@@ -38,14 +38,10 @@ the following requirements are met:
 
 #### Using the Azure PowerShell Script
 
-<div class="note">
+**Note:**
 
-Make sure Azure Resource Manager cmdlets are available; see [Azure
-Resource Manager
-Cmdlets](https://msdn.microsoft.com/en-us/library/mt125356.aspx) for the
+Make sure Azure Resource Manager cmdlets are available; see [Azure Resource Manager Cmdlets](https://msdn.microsoft.com/en-us/library/mt125356.aspx) for the
 latest installation information.
-
-</div>
 
 1.  Log in to **Azure Resource Manager** using the cmdlet:
 
@@ -139,7 +135,7 @@ latest installation information.
         # Create the VM
         New-AzureRmVM -ResourceGroupName $ResourceGroupName -Location $Location -VM $VirtualMachine
 
-    <div class="note">
+    **Note:**
 
     These are the procedural steps as of the time of writing. For more
     information, see the following Azure documentation.
@@ -152,8 +148,6 @@ latest installation information.
 
       - <https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-create-powershell>
 
-    </div>
-
 #### Using the Azure Command-Line Interface
 
 Complete the following steps to upload and provision the
@@ -161,13 +155,9 @@ Complete the following steps to upload and provision the
 
 ##### Installing the Azure Command-Line Interface
 
-<div class="note">
+**Note:**
 
-For a complete Azure CLI 2.0 command reference, see [Azure CLI 2.0:
-Command reference -
-az](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
-
-</div>
+For a complete Azure CLI 2.0 command reference, see [Azure CLI 2.0: Command reference - az](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 
 1.  Import the Microsoft repository key.
 
@@ -213,19 +203,11 @@ az](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 Complete the following steps to create resources in Microsoft Azure
 using the Azure CLI.
 
-<div class="note">
+**Note:**
 
-  - If you already have resources you can use, you can skip this section
-    and go directly to [Uploading and Provisioning the
-    {{ site.data.product.title_short }} Virtual Appliance Using the Azure
-    Command-Line
-    Interface](#uploading-provisioning-appliance-using-azure-cli).
+  - If you already have resources you can use, you can skip this section and go directly to [Uploading and Provisioning the {{ site.data.product.title_short }} Virtual Appliance Using the Azure Command-Line Interface](#uploading-provisioning-appliance-using-azure-cli).
 
-  - For a complete Azure CLI 2.0 command reference, see [Azure CLI 2.0:
-    Command reference -
-    az](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
-
-</div>
+  - For a complete Azure CLI 2.0 command reference, see [Azure CLI 2.0: Command reference - az](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 
 1.  Create a resource group in an Azure region.
 
@@ -440,11 +422,9 @@ using the Azure Command-Line Interface (Azure CLI).
 You have successfully provisioned a {{ site.data.product.title_short }} virtual
 appliance in Microsoft Azure.
 
-<div class="note">
+**Note:**
 
-The exported storage connection string does not persist after a system
-reboot. If any of the commands in the above steps fail, export the
-storage connection string again using the following commands:
+The exported storage connection string does not persist after a system reboot. If any of the commands in the above steps fail, export the storage connection string again using the following commands:
 
 1.  Get the storage account connection string.
 
@@ -467,17 +447,9 @@ storage connection string again using the following commands:
 
         $ export AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=azrhelclistact;AccountKey=NreGk...=="
 
-</div>
+  - You will need to create a data disk for the database; see [Add a disk to a Linux VM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/add-disk) for information about how to add a persistent disk to store your data.
 
-  - You will need to create a data disk for the database; see
-    <https://docs.microsoft.com/en-us/azure/virtual-machines/linux/add-disk>
-    for information about how to add a persistent disk to store your
-    data.
-
-  - See [Database
-    Requirements](https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.5/html-single/deployment_planning_guide/#database-requirements)
-    for some general guidelines for your database requirements.
+  - See [Database Requirements](../deployment_planning_guide/index.html#database-requirements) for some general guidelines for your database requirements.
 
   - For information about Azure ports used by {{ site.data.product.title_short }},
-    see
-    <https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.5/html-single/appliance_hardening_guide/#chap_red_hat_cloudforms_security_guide_firewall>.
+    see [Configuring Firewall Ports](../appliance_hardening_guide/index.html#configuring-firewall-ports).

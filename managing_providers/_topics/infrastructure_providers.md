@@ -1,6 +1,6 @@
 # Infrastructure Providers
 
-In {{ site.data.product.title }}, an infrastructure provider is a virtual
+In {{ site.data.product.title_short }}, an infrastructure provider is a virtual
 infrastructure environment that you can add to a {{ site.data.product.title_short }}
 appliance to manage and interact with the resources in that environment.
 This chapter describes the different types of infrastructure providers
@@ -30,12 +30,6 @@ display basic information about each provider:
 
 Provider authentication status
 
-{% include_relative
-_topics/discovering_multiple_management_systems.md %}
-
-{% include_relative _topics/discovering_physical_infra_providers.md
-%}
-
 ## Red Hat Virtualization Providers
 
 To use a Red Hat Virtualization provider, add it to the appliance and
@@ -59,9 +53,6 @@ appliance.
 {% include_relative
 _topics/adding_an_openstack_infrastructure_provider.md %}
 
-{% include openstack/discovering-openstack-infrastructure-providers.md
-%}
-
 ## VMware vCenter Providers
 
 To use a VMware vCenter provider, add it to the appliance and
@@ -80,14 +71,9 @@ To use a Microsoft System Center Virtual Machine Manager (SCVMM)
 provider, add it to the appliance and set up the SCVMM server for
 authentication.
 
-<div class="note">
+**Note:**
 
-To use a SCVMM provider, you must have at least one network adapter
-available for communication between the host and the SCVMM management
-server. Make sure that **Used by Management** is checked for this
-network adapter in the SCVMM host properties.
-
-</div>
+To use a SCVMM provider, you must have at least one network adapter available for communication between the host and the SCVMM management server. Make sure that **Used by Management** is checked for this network adapter in the SCVMM host properties.
 
 {% include_relative _topics/authenticating_to_microsoft_scvmm.md %}
 

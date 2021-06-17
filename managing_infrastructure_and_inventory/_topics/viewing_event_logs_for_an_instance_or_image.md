@@ -3,11 +3,9 @@
 Using an **Analysis Profile**, collect event log information from your
 instances.
 
-<div class="note">
+**Note:**
 
 This feature is only available for Windows.
-
-</div>
 
 1.  Navigate to menu:Compute\[Clouds \> Instances\].
 
@@ -17,5 +15,4 @@ This feature is only available for Windows.
 
 4.  From **Diagnostics** click **Event Logs**.
 
-The collected event log entries are displayed. Sort this list by
-clicking on the column headers.
+The collected event log entries are displayed. Sort this list by clicking on the column headers.

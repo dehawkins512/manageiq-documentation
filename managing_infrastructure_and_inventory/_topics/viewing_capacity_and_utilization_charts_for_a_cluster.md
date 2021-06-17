@@ -21,12 +21,8 @@ View capacity and utilization for a cluster.
 
 The **Capacity & Utilization** charts display
 
-<div class="note">
+**Note:**
 
-Daily charts only include full days of data. If a day does not include
-all the 24 data points for a day, the data does not show for that day.
+Daily charts only include full days of data. If a day does not include all the 24 data points for a day, the data does not show for that day.
 
-</div>
-
-For information about data optimization including utilization trend
-reports, see [???](#data-optimization).
+For information about data optimization including utilization trend reports, see [Data Optimization](../managing_infrastructure_and_inventory/index.html#data-optimization).

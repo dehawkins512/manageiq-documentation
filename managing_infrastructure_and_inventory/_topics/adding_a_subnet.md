@@ -2,9 +2,9 @@
 
 Add a subnet to an existing cloud network following the procedure below.
 
-1.  Navigate to menu:Networks\[Subnets\].
+1.  Browse to menu: **Networks > Subnets**.
 
-2.  Click ![Configuration](../images/1847.png)(**Configuration**), then
+2.  Click **Configuration**, then
     click **Add a new Cloud Subnet**.
 
 3.  Select a **Network Manager**.
@@ -27,12 +27,11 @@ Add a subnet to an existing cloud network following the procedure below.
     5.  Input the **Subnet CIDR** address in CIDR format, which contains
         the IP address range and subnet mask in one value.
 
-        <div class="note">
+        **Note:**
 
         Determine the address by calculating the number of bits masked
         in the subnet mask and append that value to the IP address
         range. For example, the subnet mask 255.255.255.0 has 24 masked
         bits. To use this mask with the IPv4 address range
         192.168.122.0, specify the address 192.168.122.0/24.
-
-        </div>
+        

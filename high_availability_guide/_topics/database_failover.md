@@ -27,14 +27,12 @@ Configuration settings are located in
 | `db_check_frequency`       | 300s          | The sleep interval in the monitor loop, it defines how frequently the connection to the database is checked.                                      |
 | `failover_check_frequency` | 60s           | The sleep interval between attempting to failover additional times.                                                                               |
 
-<div class="note">
+**Note:**
 
 `failover_attempts` and `failover_check_frequency` determine the time
 limit for the cluster to elect a new primary. To produce quicker
 failovers, reduce the value for `failover_check_frequency` and increase
 the value for `failover_attempts`.
-
-</div>
 
 ### Configuring the Failover Monitor
 
@@ -59,13 +57,11 @@ following steps:
 
         # systemctl status postgresql.service
 
-    <div class="note">
+    **Note:**
 
     You can check the status of the simulated failure by viewing the
     most recent `evm.log` log on the engine appliances.
-
-    </div>
-
+    
 3.  Check the appliance console summary screen for the primary database.
     If configured correctly, the **{{ site.data.product.title_abbr_uc }} Database**
     value in the appliance console summary should have switched from the
@@ -118,28 +114,22 @@ the standby database-only appliance, configure the following:
     6.  Enter the new standby database-only appliance hostname or IP
         address.
 
-        <div class="note">
+        **Note:**
 
         The hostname must be visible to all appliances that communicate
         with this database, including the engine appliances and any
         global region databases.
 
-        </div>
+    7.  Select `y` to configure the replication manager for automatic failover.
 
-    7.  Select `y` to configure the replication manager for automatic
-        failover.
-
-        <div class="note">
+        **Note:**
 
         If re-using the node’s identification number, select `y` to
         overwrite the existing node ID (this cannot be undone).
         Additionally, select `y` to overwrite and reconfigure the
         replication settings in `/etc/repmgr.conf` when prompted.
-
-        </div>
-
-    8.  Confirm that the replication standby server configuration
-        details are correct, and select `y` to apply the configuration.
+        
+    8.  Confirm that the replication standby server configuration details are correct, and select `y` to apply the configuration.
 
 The standby server will then run an initial synchronization with the
 primary database, and start locally in standby mode.
